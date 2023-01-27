@@ -1,7 +1,4 @@
-import { NextResponse } from 'next/server'
-
-export default function handler(req) {
-    const res = NextResponse.json({ hello: 'world' })
+export default function handler(req, res) {
     res.headers.set('Cache-Control', 's-maxage=1, stale-while-revalidate=999')
-    return res
+    return { hello: 'world' }
 }
