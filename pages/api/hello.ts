@@ -5,7 +5,3 @@ export default function handler(req) {
     res.headers.set('Cache-Control', 's-maxage=1, stale-while-revalidate=999')
     return res
 }
-
-export const config = {
-    runtime: 'edge',
-}
